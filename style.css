@@ -1,0 +1,114 @@
+:root {
+  --color1: #00a4e8;
+  --color2: #00c2db;
+  --color3: #00f3e2;
+  --color4: #8efff6;
+  --color5: #e3ffff;
+  --color6: #c49b12;
+  --color7: #9a7b16;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  background-color: var(--color1);
+}
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  background: var(--color5);
+  max-height: 100vh;
+  position: static;
+}
+
+.navbar-nav,
+a,
+.logo,
+.span {
+  background: var(--color5);
+  list-style: none;
+  text-decoration: none;
+  color: var(--color6);
+}
+.navbar-nav a {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.navbar-nav a:hover {
+  padding-top: 0.5rem;
+  border-bottom: 2px solid var(--color6);
+  color: var(--color7);
+}
+.navbar .logo {
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-family: "Times New Roman", sans-serif;
+  font-style: italic;
+}
+/* hero secsions */
+section {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  justify-self: center;
+  position: relative;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-bottom: 2px solid black;
+  z-index: 99999;
+  color: white;
+}
+.img {
+  width: 20%;
+  height: 30%;
+  border-radius: 100% 80%;
+}
+.ident {
+  font-weight: 600;
+  font-size: 1.4rem;
+  align-self: center;
+  font-family: Helvetica, sans-serif;
+}
+.ident-dynamic {
+  position: absolute;
+  display: inline;
+}
+.ident-dynamic li {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color5);
+  top: 0px;
+  display: inline-block;
+  position: relative;
+  /* animation: slide 1s steps(1) infinite; */
+}
+/* @keyframes slide {
+  120% {
+    top: 100%;
+    line-height: -150px;
+  }
+} */
+
+.ident-dynamic li span {
+  position: relative;
+}
+.ident-dynamic li span::after {
+  content: "";
+  background: var(--color1);
+  position: absolute;
+  height: 110%;
+  left: 0;
+  width: 100%;
+  border-left: 2px solid pink;
+  animation: typing 3s steps(40) infinite;
+}
+@keyframes typing {
+  100% {
+    left: 78%;
+    margin: 0 -20px 0 50px;
+  }
+}
